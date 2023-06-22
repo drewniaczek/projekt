@@ -1,0 +1,26 @@
+// KlasaB.java
+package pakiet1;
+
+public class KlasaB {
+    private String tekst;
+
+    public KlasaB(String tekst) {
+        this.tekst = tekst;
+    }
+
+    public String getTekst() {
+        return tekst;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        KlasaB other = (KlasaB) obj;
+        return tekst.equals(other.tekst);
+    }
+}
